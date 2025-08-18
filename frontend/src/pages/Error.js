@@ -18,6 +18,11 @@ function ErrorPage() {
     message = 'Could not find resource or page.';
   }
 
+  if (error.status === 401) {
+    title = "Unauthorized!";
+    message = "You are not authorized to access this page.";
+  }
+
   return (
     <>
       <MainNavigation />
